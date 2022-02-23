@@ -10,7 +10,7 @@ const entryCommand = process.argv[2] && process.argv[2].replace('--','');
 
 const _ENTRY_COMMANDS_ = {
     'install': install,
-    'unistall': unistall
+    'uninstall': uninstall
 };
 
 function install() {
@@ -30,8 +30,8 @@ svc.on('start', function () {
 svc.install()
 
 
-function unistall(){
-    svc.on('unistall', function() {
+function uninstall(){
+    svc.on('uninstall', function() {
         svc.start();
         console.log("Service was installed")
     })
